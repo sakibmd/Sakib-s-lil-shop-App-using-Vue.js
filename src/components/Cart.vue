@@ -19,10 +19,11 @@
     <li
       class="list-group-item bg-success text-white text-center mt-5 p-1"
       v-if="carts.length > 0"
+      style="cursor: pointer"
+      @click="checkout"
     >
-      <span style="cursor: pointer" @click="checkout"
-        ><strong>Checkout</strong></span
-      >
+      <strong>Checkout</strong>
+      
     </li>
   </ul>
 </template>
