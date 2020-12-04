@@ -6,7 +6,7 @@
       </li>
     </ul> -->
 
-    <navbar></navbar>
+    <navbar @search="search"></navbar>
 
     <div class="container my-5">
       <div class="row">
@@ -51,6 +51,11 @@ export default {
     },
     clearCart(){
       this.carts = []
+    },
+    search(keyword){
+      this.items = data.filter(item => {
+        return item.title.toLowerCase().indexOf(keyword.toLowerCase()) !== -1;
+      })
     }
   },
 
